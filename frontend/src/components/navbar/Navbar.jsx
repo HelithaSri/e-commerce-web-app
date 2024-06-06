@@ -12,7 +12,7 @@ const Navbar = () => {
       <div className="w-72">
         <img src={logo} alt="logo" />
       </div>
-      <ul className="flex gap-14 items-center text-[#81b175] uppercase text-xl font-bold">
+      <ul className="flex gap-14 items-center text-[#81b175] uppercase text-xl font-black">
         <li
           className="flex flex-col items-center justify-center gap-1 cursor-pointer"
           onClick={() => handleMenuClick("Shop")}
