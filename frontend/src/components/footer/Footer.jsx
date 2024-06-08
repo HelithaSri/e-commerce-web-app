@@ -1,11 +1,12 @@
 import React from "react";
-import FooterImage from "../../assets/logo.png";
+import { logo } from './../../constants/Images';
+
 
 function Footer() {
   return (
     <div className="flex flex-col justify-center items-center gap-12 py-10 shadow-md bg-[#F7F8F7]">
       <div className="flex items-center gap-5 justify-center">
-        <img src={FooterImage} alt="" width="50%" />
+        <img src={logo} alt="" width="50%" />
       </div>
       <ul className="flex list-none style gap-12 text-xl text-[#81b175]">
         <li className="cursor-pointer">Company</li>

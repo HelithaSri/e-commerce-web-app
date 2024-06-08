@@ -1,7 +1,6 @@
 import React, { useState } from "react";
-import logo from "./../../assets/logo.png";
-import cart from "./../../assets/icons/cart_icon.png";
 import { Link } from "react-router-dom";
+import {logo, cart} from '../../constants/Images'
 
 const Navbar = () => {
   const [activeMenu, setActiveMenu] = useState("Shop");

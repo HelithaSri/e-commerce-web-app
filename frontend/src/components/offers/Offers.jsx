@@ -1,5 +1,5 @@
 import React from "react";
-import OfferImage from "../../assets/images/offers.png";
+import {OfferImage} from "../../constants/Images"
 
 function Offers() {
   return (

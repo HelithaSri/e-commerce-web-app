@@ -15,6 +15,7 @@ function Populer() {
           return (
             <Item
               key={i}
+              id={item.id}
               img={item.image}
               name={item.name}
               new_price={item.new_price}

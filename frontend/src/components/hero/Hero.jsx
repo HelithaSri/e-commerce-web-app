@@ -1,6 +1,5 @@
 import React from "react";
-import HeroImage from "../../assets/images/hero.png";
-import { isDeferredData } from "./../../../node_modules/@remix-run/router/router";
+import {HeroImage} from "../../constants/Images";
 
 const Hero = () => {
   return (
@@ -11,7 +10,7 @@ const Hero = () => {
       <div className="flex flex-col gap-14 justify-center items-end pr-40 flex-1">
         <div className="flex flex-col items-end">
           <h1 className="uppercase font-bold text-4xl">New Arrivals</h1>
-          <p className="whitespace-pre-line text-9xl font-extrabold uppercase text-right">
+          <p className="whitespace-pre-line text-9xl font-black uppercase text-right">
             Just For &#10;&#13; You
           </p>
         </div>
