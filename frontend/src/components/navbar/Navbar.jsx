@@ -1,15 +1,19 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { Link } from "react-router-dom";
-import {logo, cart} from '../../constants/Images'
+import { logo, cart } from "../../constants/Images";
+import { ShopContext } from "./../../context/ShopContext";
 
 const Navbar = () => {
   const [activeMenu, setActiveMenu] = useState("Shop");
   const handleMenuClick = (menuItem) => setActiveMenu(menuItem);
+  const { getTotalCartItems } = useContext(ShopContext);
 
   return (
     <div className="flex justify-around p-6 border shadow-md bg-[#F7F8F7] ">
       <div className="w-72">
-        <img src={logo} alt="logo" />
+        <Link to="/">
+          <img src={logo} alt="logo" />
+        </Link>
       </div>
       <ul className="flex gap-14 items-center text-[#81b175] uppercase text-xl font-black">
         <li
@@ -60,7 +64,7 @@ const Navbar = () => {
           <img src={cart} alt="logo" />
         </Link>
         <div className="min-w-[22px] h-[22px] flex justify-center items-center -mt-6 -ml-10 bg-red-500 rounded-full p-1 text-white text-sm">
-          1
+          {getTotalCartItems()}
         </div>
       </div>
     </div>

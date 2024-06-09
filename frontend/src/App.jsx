@@ -13,7 +13,7 @@ import kid_banner from "./assets/images/kids_banner.png";
 
 function App() {
   return (
-    <div className="">
+    <div className="select-none">
       <BrowserRouter>
         <Navbar />
         <Routes>
