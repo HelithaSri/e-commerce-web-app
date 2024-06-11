@@ -1,33 +1,31 @@
-require('dotenv').config();
+require("dotenv").config();
 const PORT = process.env.PORT || 4000;
 const express = require("express");
-const connectDB = require('./config/db');
+const connectDB = require("./config/db");
 const jwt = require("jsonwebtoken");
 const multer = require("multer");
 const path = require("path");
 const cors = require("cors");
-const productRoutes = require('./routes/productRoutes');
-const multerMiddleware = require('./middlewares/multerMiddleware');
-
+const productRoutes = require("./routes/productRoutes");
+const multerMiddleware = require("./middlewares/multerMiddleware");
 
 const app = express();
 app.use(express.json());
 app.use(cors());
 
-connectDB(); 
+connectDB();
 
 app.get("/", (req, res) => {
   res.send("hello from simple server :)");
 });
 
-
 // Upload endpoint
 
-app.use('/images', express.static('upload/images'))
-
+app.use("/images", express.static("upload/images"));
 
 // Routes
-app.use('/api/product', productRoutes);
+
+app.use("/api/products", productRoutes);
 
 app.listen(PORT, (error) =>
   !error
