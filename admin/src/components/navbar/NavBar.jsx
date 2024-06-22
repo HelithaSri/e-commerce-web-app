@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { logo, user } from "../../constants/Images";
-import { ProductCart } from "../../constants/Icons";
 
 function NavBar() {
   return (
